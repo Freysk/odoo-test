@@ -1,0 +1,85 @@
+.footer {
+  padding-top: 100px;
+
+  &__catchline {
+    color: #ebecf2;
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+    & + .bodytext {
+      color: #d0d1dc;
+    }
+  }
+
+  &__last-cta {
+    max-width: 600px;
+  }
+
+  .about-odoo {
+    max-width: 400px;
+
+    &__logo img {
+      height: 30px;
+    }
+
+    .bodytext {
+      color: #acaac1;
+    }
+  }
+
+  &__inner {
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(39, 111, 182, 0) 0%, rgba(49, 45, 125, 1) 51%, rgba(38, 34, 110, 0) 100%);
+    }
+
+    &::before {
+      margin-bottom: 40px;
+    }
+
+    &::after {
+      margin-top: 40px;
+    }
+  }
+
+  .social {
+    &__icon {
+      height: 15px;
+    }
+  }
+
+  &__sitemap {
+    &__category-name {
+      color: #ebecf2;
+    }
+
+    &__subpage a {
+      color: #acaac1;
+    }
+  }
+
+  &__legal {
+    .copyrights,
+    & a {
+      color: #acaac1;
+    }
+
+    .copyrights a {
+      color: #ebecf2;
+    }
+
+    .copyrights a:hover {
+      color: color("white");
+    }
+  }
+
+  a:hover {
+    color: #d0d1dc;
+    text-decoration: none;
+  }
+}

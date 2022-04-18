@@ -1,0 +1,10 @@
+.block-cta {
+  position: relative;
+  margin-bottom: 60px;
+  z-index: 10;
+
+  @include media-breakpoint-up(sm) {
+    margin-bottom: 80px;
+    padding-top: 20px;
+  }
+}

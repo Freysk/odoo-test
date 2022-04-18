@@ -1,0 +1,41 @@
+.section {
+  &.tools {
+    .awesome-projects {
+      background-color: color("white");
+      border: solid 1px gray("200");
+      border-radius: 10px;
+      box-shadow: 0 0 15px gray("200");
+      max-width: 500px;
+      transform: translateY(50px);
+
+      .block-video {
+        top: -25%;
+        right: -25%;
+        width: 80%;
+      }
+    }
+
+    .slider {
+      &__name {
+        font-size: 14px;
+      }
+
+      &__progress {
+        position: relative;
+        height: 3px;
+        background-color: gray("200");
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: color("yellow");
+          display: block;
+          height: 100%;
+          width: var(--progress);
+        }
+      }
+    }
+  }
+}

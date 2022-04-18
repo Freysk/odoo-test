@@ -1,0 +1,31 @@
+.bottom-skewed,
+.top-skewed {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 200%;
+    height: 200px;
+    background-color: color("white");
+    transform: rotate(-2deg);
+  }
+}
+
+.bottom-skewed {
+  &::after {
+    z-index: 10;
+    bottom: -180px;
+    right: -100px;
+  }
+}
+
+.top-skewed {
+  &::after {
+    z-index: 10;
+    top: -140px;
+    right: -100px;
+  }
+}

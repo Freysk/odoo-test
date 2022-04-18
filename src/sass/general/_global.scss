@@ -1,0 +1,104 @@
+:root {
+  --wrapper-width: 100vw;
+
+  @include media-breakpoint-up(sm) {
+    --wrapper-width: #{map_get($container-max-widths, sm)};
+  }
+  @include media-breakpoint-up(md) {
+    --wrapper-width: #{map_get($container-max-widths, md)};
+  }
+  @include media-breakpoint-up(lg) {
+    --wrapper-width: #{map_get($container-max-widths, lg)};
+  }
+  @include media-breakpoint-up(xl) {
+    --wrapper-width: #{map_get($container-max-widths, xl)};
+  }
+}
+
+.text-turquoise {
+  color: color("turquoise");
+}
+
+// TYPOGRAPHY SETTINGS
+.h1 {
+  font-weight: bold;
+}
+
+.h3 {
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.bodytext {
+  letter-spacing: 0.01rem;
+  line-height: 2;
+  color: color("bluegray");
+
+  &--stronger {
+    color: theme-color("dark");
+    font-weight: 600;
+  }
+}
+
+// LINKS
+.link {
+  position: relative;
+  color: color("blue");
+  font-size: 0.8rem;
+  top: 0;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: color("blue");
+    bottom: -7px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease-in-out;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: color("blue");
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &--dark {
+    color: color("darkblue");
+
+    &::after {
+      background-color: color("darkblue");
+    }
+
+    &:hover {
+      color: color("darkblue");
+    }
+  }
+}
+
+// OTHER GENERAL STUFF
+.white-box {
+  background-color: color("white");
+  border-radius: 10px;
+  box-shadow: 0 0 10px gray("200");
+}
+
+// icons
+.icon {
+  &-like,
+  &-attachment,
+  &-follow {
+    height: 15px;
+  }
+}
+
+polyline,
+path {
+  stroke: inherit;
+}

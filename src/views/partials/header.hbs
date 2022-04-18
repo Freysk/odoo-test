@@ -1,0 +1,31 @@
+<header class="header bottom-skewed">
+  <div class="container">
+    {{> navbar }}
+
+    <div class="row justify-content-between">
+      <section class="section-header col text-white my-auto pr-5 pl-0">
+        <div class="section-header__content">
+          <h1 class="h1 mb-4">{{ header.content.title }}</h1>
+          <p class="bodytext text-light mb-4">{{ header.content.description }}</p>
+
+          {{> btn-cta text="Get started" url="./" class="btn btn-light btn-arrow mb-5"}}
+        </div>
+
+        {{!-- Trusted by : --}}
+        <div class="mb-5 mb-md-0">
+          <span class="mr-md-3">Trusted by:</span>
+          <ul class="trustedby__list-companies list-unstyled d-inline">
+            {{#each header.trustedby }}
+            <li class="trustedby__company d-inline">
+              <img src="{{ this.src }}" alt="{{ this.alt }}" class="mr-md-3">
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+      </section>
+
+      {{> block-cards-manager cardsManager }}
+    </div>
+
+  </div>
+</header>

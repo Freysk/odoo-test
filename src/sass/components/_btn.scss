@@ -1,0 +1,115 @@
+.btn {
+  font-size: 12px;
+  // All icons with icons are flexed
+  &-buy, &-plus, &-plus.active, &-arrow, &-arrow-light, &-play, &-add, &-documentation {
+    display: inline-flex;
+    align-items: center;
+  }
+  // Icon before text
+  &-buy, &-documentation {
+    font-weight: 600;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 12px;
+      height: 12px;
+      margin-right: .7rem;
+    }
+  }
+
+  &-buy {
+    &:hover {
+      color: color("white");
+      background-color: color("turquoise");
+      border-color: color("turquoise");
+    }
+  }
+
+  &-documentation {
+    &:hover {
+      color: color("darkblue") !important;
+      background-color: color("yellow");
+      border-color: color("yellow");
+    }
+  }
+  
+  &-buy {
+    &::before {
+      background: url('../assets/buy-darkblue.svg') no-repeat;
+    }
+    &:hover::before {
+      background: url('../assets/arrow-white.svg') no-repeat;
+    }
+  }
+
+
+  // Icon after text
+  &-plus, &-plus.active, &-arrow, &-arrow-light, &-play, &-add  {
+    &::after {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      margin-left: 20px;
+    }
+  }
+
+  &-plus::after {
+    background: url('../assets/plus.svg') no-repeat;
+  }
+
+  &-plus.active::after {
+    background: url('../assets/minus.svg') no-repeat;
+  }
+
+  
+  &-arrow::after {
+    background: url('../assets/arrow.svg') no-repeat;
+    position: relative;
+    left: 0;
+    margin-left: 10px;
+    margin-right: 5px;
+    transition: left .3s ease-in-out;
+  }
+
+  &-arrow:hover {
+    background-color: color("yellow");
+    border-color: color("yellow");
+  }
+
+  &-arrow:hover::after {
+    left: 5px;
+  }
+
+  &-arrow--light::after {
+    background: url('../assets/arrow-white.svg') no-repeat;
+  }
+
+  &-arrow--light:hover {
+    background-color: color("blue");
+    border-color: color("blue");
+  }
+
+  &-play::after {
+    background: url('../assets/play.svg') no-repeat;
+  }
+
+  &-add {
+    color: gray("700");
+  }
+
+  &-add:hover {
+    background-color: #EEE;
+    color: #000;
+  }
+
+  &-add::after {
+    background: url('../assets/plus.svg') no-repeat;
+  }
+
+  &-documentation::before {
+    background: url('../assets/documentation.svg') no-repeat;
+    width: 15px; height: 15px;
+  }
+}

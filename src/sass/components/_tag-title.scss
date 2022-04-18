@@ -1,0 +1,17 @@
+.tag-title {
+  font-size: .7rem;
+  color: color("white");
+  border-radius: 30px;
+
+  &--blue {
+    background-color: color("blue");
+  }
+
+  &--yellow {
+    background-color: color("yellow");
+  }
+
+  &--turquoise {
+    background-color: color("turquoise");
+  }
+}

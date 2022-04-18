@@ -1,0 +1,16 @@
+<section class="section awards overflow-hidden carousel">
+  <div class="bottom-skewed"></div>
+  <div class="container px-0">
+    <div class="container__mask-left"></div>
+    <div class="container__mask-right"></div>
+    {{!-- TITLE which look like a tag --}}
+    <h2>{{> tag-title this }}</h2>
+
+    <p class="awards__title mb-5">{{ description }}</p>
+    <ul class="awards__list list-unstyled d-flex carousel-content">
+      {{#each awards }}
+      {{> block-award class="mr-4 awards__item" link="true"}}
+      {{/each }}
+    </ul>
+  </div>
+</section>

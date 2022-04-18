@@ -1,0 +1,49 @@
+.navbar {
+  padding: .5rem 0;
+  margin-bottom: 40px;
+
+  @media (min-width:map_get($grid-breakpoints, md)) {
+    height: 80px;
+  }
+
+  &__logo {
+    height: 20px;
+  }
+  &__link {
+    position: relative;
+    color: color("white");
+    font-size: 0.8rem;
+    top: 0;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 0;
+      background-color: color("white");
+      bottom: -7px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: width .2s ease-in-out;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: color("white");
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &::after {
+    content:"";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: color("white");
+    opacity: 0.2;
+  }
+}

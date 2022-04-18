@@ -1,0 +1,11 @@
+.section {
+  &.features {
+    margin-bottom: 150px;
+
+    .checklist {
+      &__icon-status {
+        height: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.fontSize": 10
+}

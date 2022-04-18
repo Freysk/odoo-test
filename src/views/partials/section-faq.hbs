@@ -1,0 +1,20 @@
+<section class="section faq">
+  <div class="container text-center">
+    <h2 class="mb-4">{{ section.faq.title }}</h2>
+    <p class="mb-5">{{ section.faq.description }}</p>
+    <ul class="d-flex flex-wrap justify-content-between align-items-start list-unstyled">
+      {{#each section.faq.questions }}
+      <li class="question">
+        <div class="question__container p-3">
+          <img src="{{ this.icon }}" alt="" class="question__icon mr-2">
+          <span class="question__text text-left" aria-hidden>{{ this.question }}</span>
+          <button class="question__btn">{{ this.question }}</button>
+        </div>
+        <div class="question__answer text-left">
+          {{ this.answer }}
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>

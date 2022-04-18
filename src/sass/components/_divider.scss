@@ -1,0 +1,22 @@
+.divider {
+  position: relative;
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: gray("200");
+  margin: 15px 0;
+
+  &::before, &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 40px;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(233,236,239,1) 100%);
+  }
+
+  &::after {
+    right: 0;
+    transform: rotate(180deg);
+  }
+}

@@ -1,0 +1,22 @@
+<section class="section features pt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col px-0">
+        <h2>{{> tag-title section.features }}</h2>
+        <p class="bodytext bodytext--stronger mb-5">
+          {{ section.features.description }}
+        </p>
+        <ul class="checklist list-unstyled">
+          {{#each section.features.arguments }}
+          <li class="checklist__item d-flex align-items-center mb-2 text-turquoise">
+            <img src="./assets/checked.svg" alt="" class="checklist__icon-status mr-3">
+            <span>{{ this }}</span>
+          </li>
+          {{/each }}
+        </ul>
+      </div>
+
+      {{> block-video thumb-src="./assets/img_02.jpg" video-src="./" class="col btn-left"}}
+    </div>
+  </div>
+</section>

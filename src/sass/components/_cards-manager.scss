@@ -1,0 +1,125 @@
+.cards-manager {
+  min-width: 300px;
+  position: relative;
+  background-color: color("white");
+  border-radius: 10px;
+  border-bottom-right-radius: 50px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+
+  &__title {
+    font-size: 0.8rem;
+  }
+
+  &__btn {
+    font-size: 0.6rem;
+    border: solid 3px gray("200");
+    border-radius: 8px;
+
+    &::after {
+      height: 8px;
+      width: 8px;
+    }
+  }
+
+  .credit-card {
+    position: relative;
+    width: 100%;
+    background: right/65% no-repeat url("../assets/map.svg"), color("darkblue");
+    border-radius: 10px;
+
+    // technique to manage the ratio width/height dynamically
+    &::before {
+      content: "";
+      display: block;
+      padding-bottom: calc(100% / 1.6);
+    }
+
+    &__inner {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &__label {
+      font-size: 8px;
+      margin-bottom: 3px;
+    }
+
+    &__number-part {
+      font-size: 17px;
+      letter-spacing: 0.03rem;
+    }
+
+    &__info {
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    &__icon {
+      height: 18px;
+    }
+
+    &__status {
+      font-size: 8px;
+      background-color: color("turquoise");
+      border-radius: 5px;
+      padding: 3px 5px;
+    }
+
+    &__number-part:not(:last-child) {
+      &::after {
+        content: " - ";
+      }
+    }
+  }
+}
+
+.transactions {
+  font-size: 0.8rem;
+  color: color("darkblue");
+
+  &__link {
+    color: color("blue");
+    border-bottom: 1px dashed color("blue");
+
+    &:hover {
+      color: color("blue");
+      text-decoration: none;
+    }
+
+    &::after {
+      content: ">";
+      position: relative;
+      margin-left: 10px;
+      left: 0;
+      transition: left 0.3s ease-in-out;
+    }
+
+    &:hover::after {
+      left: 5px;
+    }
+  }
+}
+
+.transaction {
+  &__seller {
+    font-weight: 600;
+  }
+  &__amount {
+    font-weight: 500;
+  }
+  &__status {
+    color: color("bluegray");
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: gray("200");
+    margin: 15px 0;
+  }
+}

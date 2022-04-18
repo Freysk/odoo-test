@@ -1,0 +1,50 @@
+// 01 -> bootstrap 
+@import "../../node_modules/bootstrap/scss/functions";
+@import "./variables/overrides-bootstrap";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/navbar";
+@import "../../node_modules/bootstrap/scss/utilities";
+
+// will produce actual CSS from that point…
+
+// 03 -> general layout 
+// it's about typography, general settings, utilities,…
+@import "./general/global";
+@import "./general/utilities";
+
+// 04 + 05 => reusable components
+// From that point, theorically, for each existing components, there is a .scss for styling, .hbs for markup
+// (if need) a .js file for interactivity
+// 04-A -> Small ones
+@import "./components/tag-title";
+@import "./components/divider";
+// 04-B -> Clickable ones (buttons, call-to-actions,…)
+@import "./components/btn";
+@import "./components/download-app";
+// 04-C -> Bigger Blocks
+@import "./components/block-award";
+@import "./components/block-cta";
+@import "./components/block-video";
+@import "./components/cards-manager";
+
+// 05 -> Sections
+// Be aware, for these areas and section components,
+// they have their own data in a .js file in the "./data" folder.
+// The filenames matches.
+@import "./sections/header";
+@import "./sections/navbar";
+@import "./sections/footer";
+@import "./sections/section";
+@import "./sections/section-awards";
+@import "./sections/section-tools";
+@import "./sections/section-features";
+@import "./sections/section-technology";
+@import "./sections/section-faq";
+@import "./sections/section-cta";

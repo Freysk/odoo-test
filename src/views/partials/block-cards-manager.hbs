@@ -1,0 +1,45 @@
+<div class="cards-manager p-3 pb-4">
+  <div class="d-flex justify-content-between align-items-center pb-4">
+    <span class="cards-manager__title">Manage Cards</span>
+    <button class="cards-manager__btn btn btn-light btn-add">Add new</button>
+  </div>
+  <div class="credit-card text-light mb-3">
+    <div class="credit-card__inner p-3">
+      <div class="d-flex justify-content-between align-content-center mb-4">
+        <img src="./assets/mastercard.svg" alt="mastercard" class="credit-card__icon">
+        <span class="credit-card__status">{{ card.status }}</span>
+      </div>
+      <div class="credit-card__number mb-3">
+        <div class="credit-card__label text-uppercase">Card number</div>
+        {{#each card.infos.cardNumber }}
+        <span class="credit-card__number-part">{{ this }}</span>
+        {{/each}}
+      </div>
+      <div class="d-flex flex-row">
+        <div class="mr-5">
+          <div class="credit-card__label text-uppercase">Name</div>
+          <div class="credit-card__info">{{ card.infos.name }}</div>
+        </div>
+        <div>
+          <div class="credit-card__label text-uppercase">Expiry Date</div>
+          <div class="credit-card__info">{{ card.infos.expiryDate }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="transactions">
+    <ul class="transactions-list list-unstyled">
+      {{!-- Loop on Transactions --}}
+      {{#each card.transactions }}
+      <li class="transaction">
+        <div class="transaction__inner d-flex flex-row flex-nowrap justify-content-between">
+          <span class="transaction__seller">{{ this.seller }}</span>
+          <span class="transaction__amount">${{ this.amount }}&nbsp;USD</span>
+        </div>
+        <div class="transaction__status"><span>{{ this.status }}</span> - <span>{{ this.location }}</span></div>
+      </li>
+      {{/each}}
+    </ul>
+    <a href="./" class="transactions__link">View all</a>
+  </div>
+</div>

@@ -1,0 +1,101 @@
+.section.awards {
+  position: relative;
+  background-color: gray("200");
+  padding-top: 80px;
+  padding-bottom: 200px;
+  margin-bottom: 60px;
+
+  .award {
+    --scale: 1;
+    --transition-duration: 0.5s;
+    transition: transform var(--transition-duration) ease-in-out, left var(--resetOriginDuration) ease-in-out,
+      box-shadow var(--transition-duration) ease-in-out, background var(--transition-duration) ease-in-out;
+    background: rgb(250, 250, 250);
+    transform: scale(var(--scale));
+    position: relative;
+    left: var(--offset);
+
+    &:hover {
+      --scale: 1.05;
+      --transition-duration: 0.25s;
+      box-shadow: 0 0 30px gray("300");
+      background: rgb(255, 255, 255);
+    }
+  }
+
+  .container {
+    --side-margin: calc(50vw - var(--wrapper-width) / 2);
+    position: relative;
+
+    &__mask-left,
+    &__mask-right {
+      display: flex;
+      position: absolute;
+      top: 0;
+      height: 200%;
+      width: var(--side-margin);
+      z-index: 1;
+    }
+
+    &__mask-left {
+      left: calc(0px - var(--side-margin));
+    }
+
+    &__mask-right {
+      right: calc(0px - var(--side-margin));
+      flex-direction: row-reverse;
+    }
+
+    &__mask-left::before,
+    &__mask-left::after,
+    &__mask-right::before,
+    &__mask-right::after {
+      content: "";
+    }
+
+    &__mask-left::before,
+    &__mask-right::before {
+      background-color: gray("200");
+      flex-grow: 1;
+    }
+
+    &__mask-left::after,
+    &__mask-right::after {
+      background: linear-gradient(90deg, rgba(233, 236, 239, 1) 0%, rgba(233, 236, 239, 0) 100%);
+      width: 300px;
+    }
+
+    &__mask-right::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  .bottom-skewed {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+.awards {
+  &__item:nth-child(odd) {
+    position: relative;
+    top: 50px;
+  }
+
+  &__title {
+    color: color("darkblue");
+    font-weight: 600;
+  }
+}
+
+.carousel {
+  --offset: 0;
+  --resetOriginDuration: 0.8s;
+  &.animated {
+    --resetOriginDuration: 0;
+  }
+}

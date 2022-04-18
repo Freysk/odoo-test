@@ -1,0 +1,54 @@
+.award {
+  position: relative;
+  max-width: 200px;
+
+  &__link {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+  }
+
+  &__brand-logo {
+    width: 80px;
+    margin-bottom: 20px;
+  }
+
+  &__brand-comment {
+    font-size: 12px;
+    line-height: 2;
+    color: color("bluegray");
+  }
+
+  &__rating-text {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  &__reviews-number {
+    font-size: 12px;
+    color: color("bluegray");
+    margin-bottom: 0;
+  }
+
+  &__rating {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    svg {
+      width: 15px;
+      stroke: gray("300");
+    }
+
+    svg:not(:last-child) {
+      stroke: color("yellow");
+    }
+  }
+}

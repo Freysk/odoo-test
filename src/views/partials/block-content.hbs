@@ -1,0 +1,8 @@
+<div class="block-simple my-auto col px-0 {{#ifEquals title 'Tools'}}offset-sm-2{{/ifEquals}}">
+  <h2>{{> tag-title this }}</h2>
+  <h3 class="h3 mb-4">{{ catchline }}</h3>
+  <p class="bodytext">{{ description }}</p>
+  {{#if link }}
+  <a href="{{ link.url }}" class="link">{{ link.text }}</a>
+  {{/if }}
+</div>

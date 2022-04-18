@@ -1,0 +1,67 @@
+<footer class="footer text-light bg-dark top-skewed">
+  <div class="container">
+    <div class="d-flex flex-row justify-content-between align-items-center mb-4">
+      <div>
+        <p class="footer__catchline">{{ footer.catchline }}</p>
+        <p class="bodytext">{{ footer.description }}</p>
+      </div>
+      <div class="cta-container">
+        {{> btn-cta text="Documentation" url="./" class="btn btn-light btn-documentation" }}
+        {{> btn-cta text="Purchase now" url="./" class="btn btn-primary" }}
+      </div>
+    </div>
+    <div class="footer__inner">
+      <div class="d-flex justify-content-between">
+        <div class="footer__last-cta">
+          {{!-- about Odoo and social networking block --}}
+          <div class="about-odoo">
+            <h5 class="about-odoo__logo mb-3">{{> logo-odoo global }}</h5>
+            <p class="bodytext">{{ footer.aboutOdoo }}</p>
+            <ul class="social list-unstyled d-flex mb-0">
+              {{#each footer.social }}
+              <li class="social__network mr-5">
+                <a href="{{ this.url }}" class="">
+                  <img src="{{ this.icon.src }}" alt="{{ this.icon.alt }}" class="social__icon">
+                </a>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+        {{!-- sitemap --}}
+        <div class="footer__sitemap d-flex">
+          {{#each footer.sitemap.category }}
+          <ul class="footer__sitemap__category list-unstyled mr-lg-5">
+            <h6 class="footer__sitemap__category-name mb-4">{{ this.name }}</h6>
+            {{#each this.subpages }}
+            <li class="footer__sitemap__subpage mb-2">
+              <a href="{{ this.url }}">{{ this.name }}</a>
+            </li>
+            {{/each}}
+          </ul>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+    {{!-- copyright and informational pages --}}
+    <div class="footer__legal d-flex justify-content-between pt-3">
+      <span class="copyrights">© <a href="./">Odoo</a>. All rights reserved.</span>
+      <ul class="list-unstyled d-flex">
+        <li class="footer__legal-link ml-md-3">
+          <a href="./">Terms</a>
+        </li>
+        <li class="footer__legal-link ml-md-3">
+          <a href="./">Privacy</a>
+        </li>
+        <li class="footer__legal-link ml-md-3">
+          <a href="./">Cookies</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="./scripts/main.js"></script>
+</body>
+
+</html>

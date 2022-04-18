@@ -1,0 +1,56 @@
+<section class="section technology">
+  <div class="container">
+    <div class="row">
+      <ul class="col-sm boxes-list list-unstyled mr-md-5 px-0">
+        {{!-- BOX 1 --}}
+        <li class="block-user white-box">
+          <img src="./assets/person_01.jpg" alt="user's picture" class="block-user__pics">
+          <div class="block-user__infos">
+            <div class="d-flex align-items-center">
+              <div class="block-user__avatar">JH</div>
+              <div class="block-user__name">Jimmy Hendrix</div>
+            </div>
+            <img src="./assets/like-off.svg" alt="like" class="icon-like">
+          </div>
+        </li>
+        {{!-- BOX 2 --}}
+        <li class="block-validation d-flex white-box">
+          <div>
+            <div>300+ components</div>
+            <div>Built to be customized.</div>
+          </div>
+        </li>
+
+        {{!-- BOX 3 --}}
+        {{> block-award section.awards.awards.[0] }}
+        {{!-- BOX 4 --}}
+        <li class="block-brand white-box py-4 px-4 d-flex flex-wrap justify-content-center">
+          <div class="block-brand__avatar">
+            <img src="./assets/company_01.png" alt="">
+          </div>
+          <div class="block-brand__title">Website UI Kit</div>
+          <ul class="block-brand__followers list-unstyled">
+            <li class="block-brand__follower">
+              <img src="./assets/person_01.jpg" alt="Athos">
+            </li>
+            <li class="block-brand__follower">
+              <img src="./assets/person_02.jpg" alt="Porthos">
+            </li>
+            <li class="block-brand__follower">
+              <img src="./assets/person_03.jpg" alt="Aramis">
+            </li>
+          </ul>
+          {{> divider}}
+          <div class="block-icons">
+            <img src="./assets/attachment.svg" alt="attachment" class="icon-attachment mr-3">
+            <img src="./assets/follow.svg" alt="follow" class="icon-follow mr-3">
+            <img src="./assets/like-off.svg" alt="like" class="icon-like">
+          </div>
+        </li>
+      </ul>
+
+      {{!-- Section context Title, Description,... --}}
+      {{> block-content section.technology }}
+    </div>
+  </div>
+</section>

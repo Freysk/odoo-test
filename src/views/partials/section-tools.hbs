@@ -1,0 +1,19 @@
+<section class="section tools">
+  <div class="container px-0">
+    <div class="row align-items-center">
+      {{!-- no need of semantic for fake content --}}
+      <div class="awesome-projects col-sm px-5 py-4 position-relative">
+        <div class="awesome-projects__title font-weight-bolder mb-4">Awesome projects</div>
+        {{!-- SLIDERS --}}
+        {{> slider progress="27%" time="3:38" task="Create the new logo"}}
+        {{> slider progress="50%" time="5:12" task="Setup up the color palette"}}
+        {{> slider progress="78%" time="6:52" task="Wireframe and prototype"}}
+        {{!-- BLOCK VIDEO --}}
+        {{> block-video thumb-src="./assets/img_01.jpg" video-src="./" class="position-absolute btn-right"}}
+      </div>
+
+      {{!-- Section context Title, Description,... --}}
+      {{> block-content section.tools }}
+    </div>
+  </div>
+</section>

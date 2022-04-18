@@ -1,0 +1,28 @@
+<li class="award {{ class }} white-box px-4 py-5 d-flex flex-wrap justify-content-center align-items-center text-center flex-shrink-0">
+  {{#if link }}<a href="./" class="award__link"><span class="award__link">Learn more</span></a>{{/if}}
+  <img class="award__brand-logo" src="{{ this.brand.logo.src }}" alt="{{ this.brand.logo.alt }}">
+  {{#if this.comment }}
+  <p class="award__brand-comment">{{ this.comment }}</p>
+  <a href="./" class="link link--dark">Learn more</a>
+  {{else}}
+  <div class="award__rating" data-stars="{{ this.rating.stars }}">
+    <svg class="icon-star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5">
+      <path d="M11.894 2.112l2.456 7.562h7.951l-6.432 4.674 2.457 7.562-6.432-4.674L5.46 21.91l2.457-7.562-6.432-4.674h7.95l2.458-7.562z" fill="none" stroke="#cbcbcb" stroke-width="2.496" />
+    </svg>
+    <svg class="icon-star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5">
+      <path d="M11.894 2.112l2.456 7.562h7.951l-6.432 4.674 2.457 7.562-6.432-4.674L5.46 21.91l2.457-7.562-6.432-4.674h7.95l2.458-7.562z" fill="none" stroke="#cbcbcb" stroke-width="2.496" />
+    </svg>
+    <svg class="icon-star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5">
+      <path d="M11.894 2.112l2.456 7.562h7.951l-6.432 4.674 2.457 7.562-6.432-4.674L5.46 21.91l2.457-7.562-6.432-4.674h7.95l2.458-7.562z" fill="none" stroke="#cbcbcb" stroke-width="2.496" />
+    </svg>
+    <svg class="icon-star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5">
+      <path d="M11.894 2.112l2.456 7.562h7.951l-6.432 4.674 2.457 7.562-6.432-4.674L5.46 21.91l2.457-7.562-6.432-4.674h7.95l2.458-7.562z" fill="none" stroke="#cbcbcb" stroke-width="2.496" />
+    </svg>
+    <svg class="icon-star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5">
+      <path d="M11.894 2.112l2.456 7.562h7.951l-6.432 4.674 2.457 7.562-6.432-4.674L5.46 21.91l2.457-7.562-6.432-4.674h7.95l2.458-7.562z" fill="none" stroke="#cbcbcb" stroke-width="2.496" />
+    </svg>
+  </div>
+  <p class="award__rating-text">{{ this.rating.note }}</p>
+  <p class="award__reviews-number">from {{ this.rating.reviewsNumber }} reviews</p>
+  {{/if}}
+</li>

@@ -1,0 +1,13 @@
+{{#ifEquals store "applestore"}}
+<a href="" class="playstore text-light text-center d-flex mr-3">
+  <img src="./assets/apple-white.svg" alt="" class="icon-app mr-3">
+  <span>Download on the <br><i>Play Store</i></span>
+</a>
+{{/ifEquals}}
+
+{{#ifEquals store "playstore"}}
+<a href="" class="applestore text-light text-center d-flex mr-3">
+  <img src="./assets/playstore-white.svg" alt="" class="icon-app mr-3">
+  <span>Download on the <br><i>App Store</i></span>
+</a>
+{{/ifEquals}}

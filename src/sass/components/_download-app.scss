@@ -1,0 +1,24 @@
+.applestore,
+.playstore {
+  background-color: color("black");
+  border-radius: 5px;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 0;
+
+  span {
+    white-space: nowrap;
+    font-size: 0.55rem;
+    line-height: 1;
+  }
+
+  i {
+    font-size: 1rem;
+    font-style: normal;
+  }
+}
+
+.icon-app {
+  height: 25px;
+}

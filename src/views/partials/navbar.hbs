@@ -1,0 +1,16 @@
+<nav class="header__navbar navbar d-md-flex flex-row align-items-center justify-content-between">
+  {{> logo-odoo global }}
+  <ul class="navbar__links-container list-unstyled d-md-flex flex-row align-items-center mb-0">
+    {{#each navbar.links }}
+    <li class="navbar__item mr-md-4">
+      <a href="{{ this.url }}" class="navbar__link">
+        {{ title }}
+      </a>
+    </li>
+    {{/each}}
+  </ul>
+  <div class="d-md-flex flex-row align-items-center">
+    <a href="./" class="navbar__link d-block mr-md-4">Sign in</a>
+    {{> btn-cta text="Buy now" url="./" class="btn btn-light btn-buy" }}
+  </div>
+</nav>
